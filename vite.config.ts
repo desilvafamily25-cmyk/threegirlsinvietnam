@@ -9,7 +9,23 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+
+    // ⭐ Prevent Vite from transforming /admin/index.html
+    {
+      name: "no-transform-admin",
+      enforce: "post",
+      transformIndexHtml(html, ctx) {
+        if (ctx?.path?.startsWith("/admin")) {
+          return html; // leave CMS admin HTML untouched
+        }
+      },
+    },
+  ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
