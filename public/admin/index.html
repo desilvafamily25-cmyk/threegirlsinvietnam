@@ -1,12 +1,18 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Content Manager</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <!-- Decap CMS bundle -->
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js?v=2"></script>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CMS</title>
+</head>
+<body>
+  <!-- Load Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js?v=7"></script>
+
+  <!-- Force CMS to load the correct config -->
+  <script>
+    CMS.init({
+      config: '/admin/config.yml?v=7'
+    });
+  </script>
+</body>
 </html>
