@@ -1,15 +1,25 @@
 import { Calendar, MapPin, Hotel } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { tripOverviewConfig } from "@/lib/settings";
 
 const TripOverview = () => {
+  const {
+    heading,
+    subheading,
+    start_date,
+    end_date,
+    cities,
+    hotels
+  } = tripOverviewConfig;
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-beach">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-foreground">
-          Our Journey
+          {heading}
         </h2>
         <p className="text-center text-muted-foreground text-lg mb-16">
-          13 days of adventure, memories, and family fun
+          {subheading}
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -22,11 +32,11 @@ const TripOverview = () => {
             </div>
             <h3 className="text-2xl font-semibold text-center mb-3">Travel Dates</h3>
             <p className="text-center text-lg font-medium text-primary">
-              27 December 2025
+              {start_date}
             </p>
             <p className="text-center text-muted-foreground mb-2">to</p>
             <p className="text-center text-lg font-medium text-primary">
-              8 January 2026
+              {end_date}
             </p>
           </Card>
 
@@ -39,9 +49,11 @@ const TripOverview = () => {
             </div>
             <h3 className="text-2xl font-semibold text-center mb-4">Cities Visited</h3>
             <ul className="space-y-2 text-center">
-              <li className="text-lg">🌆 Ho Chi Minh City</li>
-              <li className="text-lg">🏮 Hội An</li>
-              <li className="text-lg">🏛️ Hanoi</li>
+              {cities?.map((city, idx) => (
+                <li key={idx} className="text-lg">
+                  {city.label}
+                </li>
+              ))}
             </ul>
           </Card>
 
@@ -54,9 +66,9 @@ const TripOverview = () => {
             </div>
             <h3 className="text-2xl font-semibold text-center mb-4">Accommodations</h3>
             <ul className="space-y-2 text-center text-sm">
-              <li>New World Saigon Hotel</li>
-              <li>Wyndham Garden Hội An</li>
-              <li>Meritel Hanoi</li>
+              {hotels?.map((hotel, idx) => (
+                <li key={idx}>{hotel.label}</li>
+              ))}
             </ul>
           </Card>
         </div>

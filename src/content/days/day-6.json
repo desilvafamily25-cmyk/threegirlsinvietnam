@@ -1,25 +1,18 @@
 {
-  "day_number": 1,
-  "title": "Arrival Day",
-  "date": "27 Dec 2025",
-  "city": "HCMC",
-
+  "day_number": 6,
+  "title": "New Year’s Day",
+  "date": "1 Jan 2026",
+  "city": "Hội An",
   "hero_caption": "",
   "hero_image": "",
-
   "morning": "",
   "morning_photos": [],
-
   "afternoon": "",
   "afternoon_photos": [],
-
   "evening": "",
   "evening_photos": [],
-
   "kids_rating": "",
   "costs": "",
-
   "notes": "",
-
   "gallery": []
 }

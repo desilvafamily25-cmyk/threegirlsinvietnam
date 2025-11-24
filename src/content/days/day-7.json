@@ -1,25 +1,18 @@
 {
-  "day_number": 1,
-  "title": "Arrival Day",
-  "date": "27 Dec 2025",
-  "city": "HCMC",
-
+  "day_number": 7,
+  "title": "Beach & Fly to Hanoi",
+  "date": "2 Jan 2026",
+  "city": "Hội An → Hanoi",
   "hero_caption": "",
   "hero_image": "",
-
   "morning": "",
   "morning_photos": [],
-
   "afternoon": "",
   "afternoon_photos": [],
-
   "evening": "",
   "evening_photos": [],
-
   "kids_rating": "",
   "costs": "",
-
   "notes": "",
-
   "gallery": []
 }

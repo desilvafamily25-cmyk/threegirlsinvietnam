@@ -1,25 +1,18 @@
 {
-  "day_number": 1,
-  "title": "Arrival Day",
-  "date": "27 Dec 2025",
+  "day_number": 2,
+  "title": "Exploring the City",
+  "date": "28 Dec 2025",
   "city": "HCMC",
-
   "hero_caption": "",
   "hero_image": "",
-
   "morning": "",
   "morning_photos": [],
-
   "afternoon": "",
   "afternoon_photos": [],
-
   "evening": "",
   "evening_photos": [],
-
   "kids_rating": "",
   "costs": "",
-
   "notes": "",
-
   "gallery": []
 }
