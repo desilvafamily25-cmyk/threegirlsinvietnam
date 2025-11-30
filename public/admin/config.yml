@@ -1,7 +1,6 @@
-
 backend:
-  name: git-gateway   # works well if you deploy on Netlify with Identity
-  branch: main        # change if your default branch is different
+  name: git-gateway
+  branch: main
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -9,7 +8,6 @@ public_folder: "/uploads"
 local_backend: false
 
 collections:
-  # ---------- Site settings (Hero + Trip overview) ----------
   - name: "settings"
     label: "Site Settings"
     files:
@@ -21,7 +19,6 @@ collections:
           - { label: "Year Tag", name: "year_tag", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "text" }
           - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
-
       - file: "src/content/settings/trip_overview.json"
         name: "trip_overview"
         label: "Trip Overview"
@@ -39,7 +36,6 @@ collections:
             widget: "list"
             field: { label: "Hotel", name: "label", widget: "string" }
 
-  # ---------- Daily posts ----------
   - name: "daily"
     label: "Daily Posts"
     label_singular: "Daily Post"
@@ -48,15 +44,15 @@ collections:
     slug: "day-{{day_number}}"
     identifier_field: day_number
     sort: "day_number"
+    format: "json"
+    extension: "json"
     fields:
       - { label: "Day Number", name: "day_number", widget: "number" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date (display)", name: "date", widget: "string" }
       - { label: "City", name: "city", widget: "string" }
-
       - { label: "Hero Caption", name: "hero_caption", widget: "string", required: false }
       - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
-
       - { label: "Morning Text", name: "morning", widget: "text", required: false }
       - label: "Morning Photos"
         name: "morning_photos"
@@ -66,7 +62,6 @@ collections:
           label: "Photo"
           name: "image"
           widget: "image"
-
       - { label: "Afternoon Text", name: "afternoon", widget: "text", required: false }
       - label: "Afternoon Photos"
         name: "afternoon_photos"
@@ -76,7 +71,6 @@ collections:
           label: "Photo"
           name: "image"
           widget: "image"
-
       - { label: "Evening Text", name: "evening", widget: "text", required: false }
       - label: "Evening Photos"
         name: "evening_photos"
@@ -86,12 +80,9 @@ collections:
           label: "Photo"
           name: "image"
           widget: "image"
-
       - { label: "Kids Rating", name: "kids_rating", widget: "string", required: false }
       - { label: "Daily Costs", name: "costs", widget: "text", required: false }
-
       - { label: "Notes / Reflections", name: "notes", widget: "text", required: false }
-
       - label: "Full Gallery"
         name: "gallery"
         widget: "list"
