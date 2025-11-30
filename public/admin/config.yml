@@ -58,28 +58,22 @@ collections:
         name: "morning_photos"
         widget: "list"
         required: false
-        field:
-          label: "Photo"
-          name: "image"
-          widget: "image"
+        fields:
+          - { label: "Photo", name: "image", widget: "image" }
       - { label: "Afternoon Text", name: "afternoon", widget: "text", required: false }
       - label: "Afternoon Photos"
         name: "afternoon_photos"
         widget: "list"
         required: false
-        field:
-          label: "Photo"
-          name: "image"
-          widget: "image"
+        fields:
+          - { label: "Photo", name: "image", widget: "image" }
       - { label: "Evening Text", name: "evening", widget: "text", required: false }
       - label: "Evening Photos"
         name: "evening_photos"
         widget: "list"
         required: false
-        field:
-          label: "Photo"
-          name: "image"
-          widget: "image"
+        fields:
+          - { label: "Photo", name: "image", widget: "image" }
       - { label: "Kids Rating", name: "kids_rating", widget: "string", required: false }
       - { label: "Daily Costs", name: "costs", widget: "text", required: false }
       - { label: "Notes / Reflections", name: "notes", widget: "text", required: false }
@@ -87,7 +81,5 @@ collections:
         name: "gallery"
         widget: "list"
         required: false
-        field:
-          label: "Photo"
-          name: "image"
-          widget: "image"
+        fields:
+          - { label: "Photo", name: "image", widget: "image" }
