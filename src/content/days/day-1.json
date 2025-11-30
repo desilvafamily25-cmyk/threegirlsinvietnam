@@ -1,18 +1,24 @@
 {
   "hero_caption": "",
   "notes": "",
-  "afternoon_photos": [],
-  "morning": "",
+  "afternoon_photos": [
+    "/uploads/20230112_170244.jpg"
+  ],
+  "morning": "Today is very tiring. \nWe had breakfast in the bed. ",
   "costs": "",
-  "evening": "",
+  "evening": "Want to sleep now. Long day",
   "city": "HCMC",
   "day_number": 1,
   "date": "27 Dec 2025",
-  "kids_rating": "",
+  "kids_rating": "****",
   "gallery": [],
   "hero_image": "/uploads/20241224_090841.jpg",
-  "evening_photos": [],
+  "evening_photos": [
+    "/uploads/20221115_141956.jpg"
+  ],
   "title": "Arrival Day",
-  "morning_photos": [],
-  "afternoon": ""
+  "morning_photos": [
+    "/uploads/20221023_110916.jpg"
+  ],
+  "afternoon": "we are getting used to the jet lag"
 }
