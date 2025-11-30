@@ -1,18 +1,22 @@
 {
-  "day_number": 2,
-  "title": "Exploring the City",
-  "date": "28 Dec 2025",
-  "city": "HCMC",
   "hero_caption": "",
-  "hero_image": "",
-  "morning": "",
-  "morning_photos": [],
-  "afternoon": "",
-  "afternoon_photos": [],
-  "evening": "",
-  "evening_photos": [],
-  "kids_rating": "",
-  "costs": "",
   "notes": "",
-  "gallery": []
+  "afternoon_photos": [],
+  "morning": "",
+  "costs": "",
+  "evening": "",
+  "city": "HCMC",
+  "day_number": 2,
+  "date": "28 Dec 2025",
+  "kids_rating": "",
+  "gallery": [],
+  "hero_image": "/uploads/20241224_090841.jpg",
+  "evening_photos": [],
+  "title": "Exploring the City",
+  "morning_photos": [
+    {
+      "image": "/uploads/20221023_110916.jpg"
+    }
+  ],
+  "afternoon": ""
 }
