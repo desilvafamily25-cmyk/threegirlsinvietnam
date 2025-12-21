@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import TripOverview from "@/components/TripOverview";
 import CityNavigation from "@/components/CityNavigation";
+import TripCalendar from "@/components/TripCalendar";
 import { BookOpen } from "lucide-react";
 
 const Index = () => {
@@ -8,6 +9,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Hero />
       <TripOverview />
+      <TripCalendar />
       <CityNavigation />
       
       {/* Flipbook Section */}
