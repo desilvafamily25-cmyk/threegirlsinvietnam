@@ -41,28 +41,28 @@ const TripCalendar = () => {
                   <td className="p-2"></td>
                   <td className="p-2"></td>
                   <td className="p-2"></td>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">27</span>
-                    <div className="text-xs text-coral mt-1">HCMC</div>
+                  {/* Dec 27 - HCMC */}
+                  <td className="border border-coral/30 p-3 rounded-lg bg-coral/15">
+                    <span className="font-bold text-foreground text-lg">27</span>
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">28</span>
-                    <div className="text-xs text-coral mt-1">HCMC</div>
+                  {/* Dec 28 - HCMC */}
+                  <td className="border border-coral/30 p-3 rounded-lg bg-coral/15">
+                    <span className="font-bold text-foreground text-lg">28</span>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">29</span>
-                    <div className="text-xs text-coral mt-1">HCMC</div>
+                  {/* Dec 29 - HCMC */}
+                  <td className="border border-coral/30 p-3 rounded-lg bg-coral/15">
+                    <span className="font-bold text-foreground text-lg">29</span>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg bg-sky-blue/20">
-                    <span className="font-semibold text-foreground">30</span>
-                    <div className="text-xs text-sky-blue mt-1">✈ SGN → DAD</div>
-                    <div className="text-xs text-turquoise">Hội An</div>
+                  {/* Dec 30 - Flight to Hội An */}
+                  <td className="border border-turquoise/30 p-3 rounded-lg bg-turquoise/15">
+                    <span className="font-bold text-foreground text-lg">30</span>
+                    <div className="text-base mt-1">✈️</div>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">31</span>
-                    <div className="text-xs text-turquoise mt-1">Hội An</div>
+                  {/* Dec 31 - Hội An */}
+                  <td className="border border-turquoise/30 p-3 rounded-lg bg-turquoise/15">
+                    <span className="font-bold text-foreground text-lg">31</span>
                   </td>
                   <td className="p-2"></td>
                   <td className="p-2"></td>
@@ -93,45 +93,46 @@ const TripCalendar = () => {
                   <td className="p-2"></td>
                   <td className="p-2"></td>
                   <td className="p-2"></td>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">1</span>
-                    <div className="text-xs text-turquoise mt-1">Hội An</div>
+                  {/* Jan 1 - Hội An */}
+                  <td className="border border-turquoise/30 p-3 rounded-lg bg-turquoise/15">
+                    <span className="font-bold text-foreground text-lg">1</span>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg bg-sky-blue/20">
-                    <span className="font-semibold text-foreground">2</span>
-                    <div className="text-xs text-sky-blue mt-1">✈ DAD → HAN</div>
-                    <div className="text-xs text-primary">Hanoi</div>
+                  {/* Jan 2 - Flight to Hanoi */}
+                  <td className="border border-sky-blue/30 p-3 rounded-lg bg-sky-blue/15">
+                    <span className="font-bold text-foreground text-lg">2</span>
+                    <div className="text-base mt-1">✈️</div>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg bg-sunshine/20">
-                    <span className="font-semibold text-foreground">3</span>
-                    <div className="text-xs text-sunshine mt-1">🚢 Halong Bay</div>
-                    <div className="text-xs text-sunshine">Cruise</div>
+                  {/* Jan 3 - Halong Bay Cruise */}
+                  <td className="border-2 border-sunshine/50 p-3 rounded-l-lg rounded-r-none bg-sunshine/25">
+                    <span className="font-bold text-foreground text-lg">3</span>
+                    <div className="text-base mt-1">🚢</div>
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-border/50 p-3 rounded-lg bg-sunshine/20">
-                    <span className="font-semibold text-foreground">4</span>
-                    <div className="text-xs text-sunshine mt-1">🚢 Halong →</div>
-                    <div className="text-xs text-primary">Hanoi</div>
+                  {/* Jan 4 - Halong Bay Cruise continues */}
+                  <td className="border-2 border-sunshine/50 p-3 rounded-r-lg rounded-l-none bg-sunshine/25">
+                    <span className="font-bold text-foreground text-lg">4</span>
+                    <div className="text-base mt-1">🚢</div>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">5</span>
-                    <div className="text-xs text-primary mt-1">Hanoi</div>
+                  {/* Jan 5 - Hanoi */}
+                  <td className="border border-sky-blue/30 p-3 rounded-lg bg-sky-blue/15">
+                    <span className="font-bold text-foreground text-lg">5</span>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg">
-                    <span className="font-semibold text-foreground">6</span>
-                    <div className="text-xs text-primary mt-1">Hanoi</div>
+                  {/* Jan 6 - Hanoi */}
+                  <td className="border border-sky-blue/30 p-3 rounded-lg bg-sky-blue/15">
+                    <span className="font-bold text-foreground text-lg">6</span>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg bg-sky-blue/20">
-                    <span className="font-semibold text-foreground">7</span>
-                    <div className="text-xs text-sky-blue mt-1">✈ HAN → SGN</div>
+                  {/* Jan 7 - Flight */}
+                  <td className="border border-sky-blue/30 p-3 rounded-lg bg-sky-blue/15">
+                    <span className="font-bold text-foreground text-lg">7</span>
+                    <div className="text-base mt-1">✈️</div>
                   </td>
-                  <td className="border border-border/50 p-3 rounded-lg bg-sky-blue/20">
-                    <span className="font-semibold text-foreground">8</span>
-                    <div className="text-xs text-sky-blue mt-1">✈ Return</div>
-                    <div className="text-xs text-sky-blue">to MEL</div>
+                  {/* Jan 8 - Return flight */}
+                  <td className="border border-border/50 p-3 rounded-lg bg-muted/30">
+                    <span className="font-bold text-foreground text-lg">8</span>
+                    <div className="text-base mt-1">✈️</div>
+                    <div className="text-xs text-muted-foreground">MEL</div>
                   </td>
-                  <td className="p-2"></td>
                   <td className="p-2"></td>
                   <td className="p-2"></td>
                 </tr>
@@ -140,18 +141,26 @@ const TripCalendar = () => {
           </div>
 
           {/* Legend */}
-          <div className="flex flex-wrap gap-4 text-sm border-t border-border/50 pt-6">
+          <div className="flex flex-wrap gap-6 text-sm border-t border-border/50 pt-6">
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded bg-sky-blue/20 border border-sky-blue/50"></div>
-              <span className="text-muted-foreground">Flight / Travel Day</span>
+              <div className="w-5 h-5 rounded bg-coral/15 border-2 border-coral/40"></div>
+              <span className="text-foreground font-medium">HCMC</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded bg-sunshine/20 border border-sunshine/50"></div>
-              <span className="text-muted-foreground">Halong Bay Cruise</span>
+              <div className="w-5 h-5 rounded bg-turquoise/15 border-2 border-turquoise/40"></div>
+              <span className="text-foreground font-medium">Hội An</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded bg-card border border-border/50"></div>
-              <span className="text-muted-foreground">Hotel Stay</span>
+              <div className="w-5 h-5 rounded bg-sky-blue/15 border-2 border-sky-blue/40"></div>
+              <span className="text-foreground font-medium">Hanoi</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 rounded bg-sunshine/25 border-2 border-sunshine/50"></div>
+              <span className="text-foreground font-medium">🚢 Cruise</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">✈️</span>
+              <span className="text-foreground font-medium">Flight</span>
             </div>
           </div>
         </div>
