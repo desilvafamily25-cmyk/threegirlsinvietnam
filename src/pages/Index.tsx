@@ -9,22 +9,21 @@ const Index = () => {
     <div className="min-h-screen">
       <Hero />
       <TripOverview />
-      <TripCalendar />
       <CityNavigation />
       
       {/* Flipbook Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-12 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-coral/20 text-coral px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center gap-2 bg-coral/20 text-coral px-4 py-2 rounded-full text-sm font-medium mb-3">
               <BookOpen className="w-4 h-4" />
               Our Travel Story
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
               Flip Through Our Journey
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Browse through our beautifully curated travel flipbook featuring all the magical moments from Vietnam.
+            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
+              Browse through our beautifully curated travel flipbook.
             </p>
           </div>
           
@@ -32,7 +31,7 @@ const Index = () => {
             <iframe 
               allowFullScreen={true}
               src="https://designrr.page/?id=596585&token=3928259773&h=2228" 
-              height="600" 
+              height="500" 
               width="100%" 
               frameBorder="0"
               className="w-full"
@@ -41,6 +40,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      <TripCalendar />
       
       {/* Footer */}
       <footer className="bg-gradient-ocean text-white py-12 px-4">
