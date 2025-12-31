@@ -1,6 +1,11 @@
-import { Plane, Camera, MapPin } from "lucide-react";
 import defaultHeroImage from "@/assets/hero-lanterns.jpg";
 import { heroConfig } from "@/lib/settings";
+
+const floatingPhotos = [
+  { src: "/uploads/20251229_151514.jpg", alt: "Travel memory 1", position: "top-16 left-4 md:left-12", delay: "0s", size: "w-20 h-24 md:w-28 md:h-32" },
+  { src: "/uploads/20251229_151640.jpg", alt: "Travel memory 2", position: "top-24 right-4 md:right-16", delay: "1.5s", size: "w-20 h-24 md:w-28 md:h-32" },
+  { src: "/uploads/20251229_151546.jpg", alt: "Travel memory 3", position: "bottom-40 left-8 md:left-24", delay: "3s", size: "w-20 h-24 md:w-28 md:h-32" },
+];
 
 const Hero = () => {
   const { title, year_tag, tagline, hero_image } = heroConfig;
@@ -20,16 +25,22 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
         
-        {/* Floating Icons */}
-        <div className="absolute top-20 left-10 animate-float">
-          <Plane className="h-12 w-12 text-sunshine opacity-80" />
-        </div>
-        <div className="absolute top-32 right-16 animate-float" style={{ animationDelay: "1s" }}>
-          <Camera className="h-10 w-10 text-coral opacity-80" />
-        </div>
-        <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: "2s" }}>
-          <MapPin className="h-10 w-10 text-turquoise opacity-80" />
-        </div>
+        {/* Floating Photos */}
+        {floatingPhotos.map((photo, index) => (
+          <div 
+            key={index}
+            className={`absolute ${photo.position} animate-float`}
+            style={{ animationDelay: photo.delay }}
+          >
+            <div className={`${photo.size} rounded-lg overflow-hidden shadow-elegant border-2 border-white/80 rotate-3 hover:rotate-0 transition-transform duration-300`}>
+              <img 
+                src={photo.src} 
+                alt={photo.alt}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Hero Content */}
