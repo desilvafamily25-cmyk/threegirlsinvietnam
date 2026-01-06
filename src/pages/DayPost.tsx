@@ -102,16 +102,19 @@ const DayPost = () => {
           </p>
 
           <div className="bg-muted/30 rounded-2xl p-6 min-h-[200px]">
-            {hasMorningPhotos ? (
+          {hasMorningPhotos ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {dayData.morning_photos!.map((p, idx) => (
-                  <img
-                    key={idx}
-                    src={p.image}
-                    alt={`Morning photo ${idx + 1}`}
-                    className="w-full h-36 object-cover rounded-xl"
-                  />
-                ))}
+                {dayData.morning_photos!.map((p, idx) => {
+                  const src = typeof p === 'string' ? p : p.image;
+                  return (
+                    <img
+                      key={idx}
+                      src={src}
+                      alt={`Morning photo ${idx + 1}`}
+                      className="w-full h-36 object-cover rounded-xl"
+                    />
+                  );
+                })}
               </div>
             ) : (
               <div className="flex items-center justify-center h-full">
@@ -137,14 +140,17 @@ const DayPost = () => {
           <div className="bg-muted/30 rounded-2xl p-6 min-h-[200px]">
             {hasAfternoonPhotos ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {dayData.afternoon_photos!.map((p, idx) => (
-                  <img
-                    key={idx}
-                    src={p.image}
-                    alt={`Afternoon photo ${idx + 1}`}
-                    className="w-full h-36 object-cover rounded-xl"
-                  />
-                ))}
+                {dayData.afternoon_photos!.map((p, idx) => {
+                  const src = typeof p === 'string' ? p : p.image;
+                  return (
+                    <img
+                      key={idx}
+                      src={src}
+                      alt={`Afternoon photo ${idx + 1}`}
+                      className="w-full h-36 object-cover rounded-xl"
+                    />
+                  );
+                })}
               </div>
             ) : (
               <div className="flex items-center justify-center h-full">
@@ -170,14 +176,17 @@ const DayPost = () => {
           <div className="bg-muted/30 rounded-2xl p-6 min-h-[200px]">
             {hasEveningPhotos ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {dayData.evening_photos!.map((p, idx) => (
-                  <img
-                    key={idx}
-                    src={p.image}
-                    alt={`Evening photo ${idx + 1}`}
-                    className="w-full h-36 object-cover rounded-xl"
-                  />
-                ))}
+                {dayData.evening_photos!.map((p, idx) => {
+                  const src = typeof p === 'string' ? p : p.image;
+                  return (
+                    <img
+                      key={idx}
+                      src={src}
+                      alt={`Evening photo ${idx + 1}`}
+                      className="w-full h-36 object-cover rounded-xl"
+                    />
+                  );
+                })}
               </div>
             ) : (
               <div className="flex items-center justify-center h-full">
@@ -230,14 +239,17 @@ const DayPost = () => {
           <div className="bg-muted/30 rounded-2xl p-6 min-h-[300px]">
             {hasGallery ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {dayData.gallery!.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img.image}
-                    alt={`Gallery photo ${idx + 1}`}
-                    className="w-full h-36 object-cover rounded-xl"
-                  />
-                ))}
+                {dayData.gallery!.map((img, idx) => {
+                  const src = typeof img === 'string' ? img : img.image;
+                  return (
+                    <img
+                      key={idx}
+                      src={src}
+                      alt={`Gallery photo ${idx + 1}`}
+                      className="w-full h-36 object-cover rounded-xl"
+                    />
+                  );
+                })}
               </div>
             ) : (
               <div className="flex items-center justify-center h-full">
