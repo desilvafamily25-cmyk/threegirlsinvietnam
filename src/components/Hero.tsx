@@ -11,6 +11,8 @@ const floatingPhotos = [
   { src: "/uploads/20251229_151459.jpg", alt: "Travel memory 5", position: "top-1/3 left-1/2 -translate-x-1/2", delay: "2s", size: "w-20 h-24 md:w-28 md:h-32", rotate: "rotate-1", parallaxSpeed: 0.25 },
 ];
 
+const floatingGallery = floatingPhotos.map(p => p.src);
+
 const Hero = () => {
   const { title, year_tag, tagline, hero_image } = heroConfig;
   const [scrollY, setScrollY] = useState(0);
@@ -25,6 +27,8 @@ const Hero = () => {
     ? hero_image
     : defaultHeroImage;
 
+  const allHeroImages = [heroSrc, ...floatingGallery];
+
   return (
     <div className="relative overflow-hidden">
       {/* Hero Image */}
@@ -33,6 +37,7 @@ const Hero = () => {
           src={heroSrc}
           alt={tagline || "Vietnam travel hero image"}
           className="absolute inset-0 h-full w-full object-cover"
+          gallery={allHeroImages}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
         
@@ -51,6 +56,7 @@ const Hero = () => {
                 src={photo.src} 
                 alt={photo.alt}
                 className="w-full h-full object-cover"
+                gallery={allHeroImages}
               />
             </div>
           </div>
