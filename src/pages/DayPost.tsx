@@ -38,6 +38,14 @@ const DayPost = () => {
   const hasEveningPhotos = dayData.evening_photos?.length > 0;
   const hasGallery = dayData.gallery?.length > 0;
 
+  // Build gallery arrays for navigation
+  const getPhotoSrc = (p: string | { image: string }) => typeof p === 'string' ? p : p.image;
+  const morningGallery = dayData.morning_photos?.map(getPhotoSrc) || [];
+  const afternoonGallery = dayData.afternoon_photos?.map(getPhotoSrc) || [];
+  const eveningGallery = dayData.evening_photos?.map(getPhotoSrc) || [];
+  const fullGallery = dayData.gallery?.map(getPhotoSrc) || [];
+  const allPhotos = [...morningGallery, ...afternoonGallery, ...eveningGallery, ...fullGallery.filter(p => !morningGallery.includes(p) && !afternoonGallery.includes(p) && !eveningGallery.includes(p))];
+
   return (
     <div className="min-h-screen bg-gradient-beach">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -71,6 +79,7 @@ const DayPost = () => {
                 src={dayData.hero_image}
                 alt={dayData.hero_caption || dayData.title}
                 className="w-full h-full object-cover"
+                gallery={allPhotos.length > 0 ? [dayData.hero_image, ...allPhotos] : undefined}
               />
             ) : (
               <>
@@ -113,6 +122,7 @@ const DayPost = () => {
                       src={src}
                       alt={`Morning photo ${idx + 1}`}
                       className="w-full h-36 object-cover rounded-xl"
+                      gallery={morningGallery}
                     />
                   );
                 })}
@@ -149,6 +159,7 @@ const DayPost = () => {
                       src={src}
                       alt={`Afternoon photo ${idx + 1}`}
                       className="w-full h-36 object-cover rounded-xl"
+                      gallery={afternoonGallery}
                     />
                   );
                 })}
@@ -185,6 +196,7 @@ const DayPost = () => {
                       src={src}
                       alt={`Evening photo ${idx + 1}`}
                       className="w-full h-36 object-cover rounded-xl"
+                      gallery={eveningGallery}
                     />
                   );
                 })}
@@ -248,6 +260,7 @@ const DayPost = () => {
                       src={src}
                       alt={`Gallery photo ${idx + 1}`}
                       className="w-full h-36 object-cover rounded-xl"
+                      gallery={fullGallery}
                     />
                   );
                 })}
